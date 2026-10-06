@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="300">
+<title>오늘의 일정</title>
+<script>
+// DATA-START  (아침 정리 때 이 블록만 새로 씁니다. 아래 화면 코드는 고치지 않습니다.)
+window.DATA = {
+  "date": "2026-10-07",
+  "weekday": "수",
+  "updated": "2026-10-07 아침",
+  "badge": "",
+  "ttDay": "수",
+  "urgent": [
+    { "title": "제144회 학교운영위원회 심의안건 제출", "detail": "마감 10/6(화) 지남 · 완료 표시 없음 · 운영위는 10/16(금) 15:30", "due": "마감 지남" }
+  ],
+  "todayEvents": [
+    { "text": "다모임 15:20~ (지능형 과학실 활용 교과 융합 수업 방안 협의)", "kind": "star" },
+    { "text": "지능형과학실 연수", "kind": "star" },
+    { "text": "교육정보부: 인공지능활용 그림그리기대회 15:00~16:30", "kind": "school" },
+    { "text": "진로복지부: 특수학급 성교육 (3~4교시 1·2학년 / 5~6교시 3학년)", "kind": "school" },
+    { "text": "3학년부: 경남관광고 입시설명회 9:45~ 수학교과실", "kind": "school" },
+    { "text": "쭌이", "kind": "personal" }
+  ],
+  "lessons": [
+    { "period": 1, "cls": "2-6", "title": "11차시 배설계 2" },
+    { "period": 2, "cls": "2-4", "title": "11차시 배설계 2" },
+    { "period": 6, "cls": "2-5", "title": "9차시 호흡계 2" }
+  ],
+  "lessonNote": "4교시 2-1은 진도표에 취소선(수업 없음)",
+  "upcoming": [
+    { "date": "10/8", "wd": "목", "items": [
+      { "text": "교육장기 육상경기대회 · 졸업앨범 촬영 16:00~ 교장실", "kind": "school" },
+      { "text": "2-5 · 2-6 우리은하 2 / 2-2 10차시 / 2-3 11차시 / 2-5 10차시", "kind": "lesson" }
+    ]},
+    { "date": "10/9", "wd": "금", "items": [ { "text": "한글날", "kind": "holiday" } ]},
+    { "date": "10/10", "wd": "토", "items": [ { "text": "포항 집", "kind": "personal" } ]},
+    { "date": "10/11", "wd": "일", "items": [ { "text": "출판기획 회의 20:00~", "kind": "personal" } ]},
+    { "date": "10/12", "wd": "월", "items": [
+      { "text": "부장회의", "kind": "star" },
+      { "text": "재과만 수업나눔 · 교육복지 프로그램 15:10~16:30", "kind": "school" }
+    ]},
+    { "date": "10/13", "wd": "화", "items": [
+      { "text": "7교시 동아리 활동(동아리 담당교사 지도) · 3학년 2차시험 시간표·범위 탑재", "kind": "school" }
+    ]},
+    { "date": "10/14", "wd": "수", "items": [
+      { "text": "공간재구조화 연수 - 합포초등학교 13시~ (행정실장·담당교사 참여)", "kind": "school" },
+      { "text": "수업혁신 전학공 수업나눔 사전 협의(그룹B) · 학부모평생교육 시작 18:30~", "kind": "school" }
+    ]},
+    { "date": "10/16", "wd": "금", "items": [
+      { "text": "교육기본통계 조사 마감", "kind": "star" },
+      { "text": "제144회 학교운영위원회 임시회 15:30", "kind": "star" },
+      { "text": "1차시험 성적표 배부 · 실천이사회 · 동중23모임", "kind": "school" }
+    ]},
+    { "date": "10/17", "wd": "토", "items": [ { "text": "교감2분임 화왕산 (10시까지) · 재과만 협의회 20시", "kind": "personal" } ]},
+    { "date": "10/18", "wd": "일", "items": [ { "text": "성산아트홀 연주회 17시", "kind": "personal" } ]},
+    { "date": "10/19", "wd": "월", "items": [
+      { "text": "부장회의", "kind": "star" },
+      { "text": "3학년 2차시험 고사원안 제출 · 소방작동점검 14:00~16:00", "kind": "school" }
+    ]},
+    { "date": "10/20", "wd": "화", "items": [ { "text": "7교시 창체 독도의 날 행사 (전 교사 지도)", "kind": "star" } ]},
+    { "date": "10/21", "wd": "수", "items": [
+      { "text": "자율형 종합감사 3차 점검(자료실, ~10/23) · 후문지도", "kind": "school" },
+      { "text": "수업혁신 전학공 수업나눔 사후 협의(그룹B) · 사이버보안 진단의 날", "kind": "school" }
+    ]}
+  ],
+  "todos": [
+    { "due": "10/6 화", "title": "제144회 학교운영위원회 심의안건 제출", "detail": "메신저 안내 · 마감 지남", "state": "late" },
+    { "due": "10/16 금", "title": "교육기본통계 조사", "detail": "교무기획부 · 10/6 시작", "state": "open" }
+  ],
+  "sequence": ["5차시 순환계1","6차시 순환계2","7차시","8차시 호흡계1","9차시 호흡계2","10차시 배설계1","11차시 배설계2","12차시 전체 연결","수행1 질병조사","수행2 발표자료 제작","수행3 발표1","수행4 발표2","수행5 성찰·마무리"],
+  "progress": [
+    { "cls": "2-1", "done": 6, "date": "10/6", "extra": "" },
+    { "cls": "2-2", "done": 5, "date": "10/1", "extra": "" },
+    { "cls": "2-3", "done": 6, "date": "10/6", "extra": "" },
+    { "cls": "2-4", "done": 6, "date": "10/6", "extra": "" },
+    { "cls": "2-5", "done": 4, "date": "9/30", "extra": "별과 우주: 우리은하1" },
+    { "cls": "2-6", "done": 6, "date": "10/6", "extra": "별과 우주: 우리은하1" }
+  ],
+  "timetable": {
+    "월": ["2-6","2-5","","2-2","2-4","",""],
+    "화": ["2-1","","2-2","2-3","","2-5","창체"],
+    "수": ["2-6","2-4","","2-1","","2-5",""],
+    "목": ["","2-5★","2-6★","","2-2","","2-3"],
+    "금": ["","2-6","2-4","","2-1","2-3",""]
+  },
+  "notes": [
+    "10/21~23 자율형 종합감사 3차 점검(자료실)",
+    "2-5는 본 진도가 앞선 반보다 2차시 뒤 (오늘 6교시 9차시, 10/8 10차시 예정)",
+    "새 메신저 쪽지는 캡처해서 채팅에 붙여넣으면 반영됩니다"
+  ]
+};
+// DATA-END
+</script>
+<style>
+:root{
+  --bg:#f4f1ea; --card:#fffdf8; --ink:#23262b; --sub:#6c6f76; --line:#e4dfd3;
+  --accent:#1f6f5c; --accent-soft:#dcefe8; --warn:#c2410c; --warn-soft:#fde8dc;
+  --star:#b45309; --star-soft:#fdf0d5; --personal:#6d5bd0; --personal-soft:#ebe8fb;
+  --lesson:#1d5fa8; --lesson-soft:#e1edf9; --holiday:#b4233a; --holiday-soft:#fbe3e7;
+  --shadow:0 1px 2px rgba(40,35,20,.06),0 6px 20px rgba(40,35,20,.05);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#15171a; --card:#1e2125; --ink:#eceae4; --sub:#9a9da4; --line:#2e3238;
+    --accent:#5cc4a7; --accent-soft:#1c3a33; --warn:#fb923c; --warn-soft:#3b2416;
+    --star:#f2b84b; --star-soft:#3a2e14; --personal:#a99cf5; --personal-soft:#2a2647;
+    --lesson:#7db7f0; --lesson-soft:#172c42; --holiday:#f2798c; --holiday-soft:#3d1c23;
+    --shadow:none;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Pretendard","Malgun Gothic","맑은 고딕","Apple SD Gothic Neo",system-ui,sans-serif;
+  font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:28px 16px 56px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px 20px;margin-bottom:22px}
+.date{font-size:34px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.date small{font-size:18px;font-weight:600;color:var(--sub);margin-left:6px}
+.badge{display:inline-block;padding:5px 12px;border-radius:999px;background:var(--accent);color:#fff;font-weight:700;font-size:13px}
+@media (prefers-color-scheme:dark){.badge{color:#0e1a17}}
+.updated{margin-left:auto;color:var(--sub);font-size:12.5px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(12,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow);min-width:0}
+.c5{grid-column:span 5}.c7{grid-column:span 7}.c12{grid-column:span 12}.c6{grid-column:span 6}
+@media (max-width:820px){.c5,.c7,.c6{grid-column:span 12}.date{font-size:28px}.updated{margin-left:0;width:100%}}
+h2{margin:0 0 12px;font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--sub)}
+.urgent{background:var(--warn-soft);border-color:transparent}
+.urgent h2{color:var(--warn)}
+.u-item{display:flex;gap:12px;align-items:baseline;padding:6px 0}
+.u-item + .u-item{border-top:1px dashed color-mix(in srgb,var(--warn) 30%,transparent)}
+.u-title{font-weight:700;font-size:17px}
+.u-detail{color:var(--sub);font-size:13.5px}
+.due{flex:none;font-size:12px;font-weight:800;color:#fff;background:var(--warn);padding:3px 9px;border-radius:6px}
+@media (prefers-color-scheme:dark){.due{color:#1a0f08}}
+table{width:100%;border-collapse:collapse}
+.lessons td{padding:10px 8px;border-top:1px solid var(--line);vertical-align:middle}
+.lessons tr:first-child td{border-top:0}
+.period{width:64px;color:var(--sub);font-variant-numeric:tabular-nums;font-weight:600}
+.cls{width:74px}
+.chip{display:inline-block;padding:3px 10px;border-radius:8px;font-weight:800;background:var(--lesson-soft);color:var(--lesson);font-variant-numeric:tabular-nums}
+.free td{color:var(--sub);opacity:.55;padding:5px 8px}
+.ltitle{font-weight:600}
+.note{margin-top:10px;color:var(--sub);font-size:13px}
+ul.ev{list-style:none;margin:0;padding:0}
+ul.ev li{display:flex;gap:10px;align-items:baseline;padding:6px 0}
+.tag{flex:none;font-size:11.5px;font-weight:800;padding:2px 8px;border-radius:6px;min-width:44px;text-align:center}
+.k-star{background:var(--star-soft);color:var(--star)}
+.k-school{background:color-mix(in srgb,var(--sub) 14%,transparent);color:var(--sub)}
+.k-lesson{background:var(--lesson-soft);color:var(--lesson)}
+.k-personal{background:var(--personal-soft);color:var(--personal)}
+.k-holiday{background:var(--holiday-soft);color:var(--holiday)}
+.t-star{font-weight:700}
+.up-row{display:grid;grid-template-columns:92px 1fr;gap:6px 14px;padding:12px 0;border-top:1px solid var(--line)}
+.up-row:first-of-type{border-top:0;padding-top:0}
+.up-date{font-weight:800;font-variant-numeric:tabular-nums;font-size:16px}
+.up-date span{display:block;font-size:12px;font-weight:600;color:var(--sub)}
+.wd-토 .up-date{color:var(--lesson)} .wd-일 .up-date,.hol .up-date{color:var(--holiday)}
+@media (max-width:560px){.up-row{grid-template-columns:1fr}}
+.prog-row{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}
+.prog-row:first-of-type{border-top:0}
+.prog-cls{font-weight:800;font-variant-numeric:tabular-nums}
+.bar{display:flex;gap:3px}
+.bar i{flex:1;height:10px;border-radius:3px;background:var(--line)}
+.bar i.on{background:var(--accent)}
+.bar i.next{background:var(--accent-soft);outline:1.5px solid var(--accent);outline-offset:-1.5px}
+.prog-label{font-size:12.5px;color:var(--sub);margin-top:4px}
+.prog-label b{color:var(--ink);font-weight:600}
+.tt th,.tt td{border:1px solid var(--line);padding:7px 4px;text-align:center;font-variant-numeric:tabular-nums;font-size:13.5px}
+.tt th{color:var(--sub);font-weight:700;font-size:12.5px}
+.tt td.has{font-weight:700}
+.tt .today{background:var(--accent-soft)}
+.tt th.today{color:var(--accent)}
+.tt-wrap{overflow-x:auto}
+.todo{display:grid;grid-template-columns:86px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.todo:first-of-type{border-top:0}
+.todo-due{font-weight:800;font-variant-numeric:tabular-nums}
+.todo.today .todo-due{color:var(--warn)}
+.todo.late .todo-due{color:var(--holiday)}
+.todo-detail{font-size:13px;color:var(--sub)}
+ul.notes{margin:0;padding-left:18px;color:var(--sub);font-size:13.5px}
+.empty{color:var(--sub)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="date" id="date"></div>
+    <div id="badge"></div>
+    <div class="updated" id="updated"></div>
+  </header>
+  <div class="grid">
+    <section class="card urgent c12" id="urgent"></section>
+    <section class="card c7"><h2>오늘 수업 · 과학</h2><table class="lessons" id="lessons"></table><div class="note" id="lessonNote"></div></section>
+    <section class="card c5"><h2>오늘 일정</h2><ul class="ev" id="today"></ul></section>
+    <section class="card c12"><h2>다가오는 일정 · 2주</h2><div id="upcoming"></div></section>
+    <section class="card c6"><h2>반별 진도</h2><div id="progress"></div></section>
+    <section class="card c6"><h2>주간 시간표</h2><div class="tt-wrap"><table class="tt" id="tt"></table></div><div class="note">★ 목요일 2·3교시는 별과 우주 단원</div></section>
+    <section class="card c7"><h2>할 일</h2><div id="todos"></div></section>
+    <section class="card c5"><h2>참고</h2><ul class="notes" id="notes"></ul></section>
+  </div>
+</div>
+<script>
+(function(){
+  var D = window.DATA || {};
+  var $ = function(id){ return document.getElementById(id); };
+  var esc = function(s){ return String(s == null ? "" : s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); };
+  var KIND = { star:"★ 교무", school:"학교", lesson:"수업", personal:"개인", holiday:"휴일" };
+
+  var p = (D.date || "").split("-");
+  $("date").innerHTML = esc(+p[1]) + "월 " + esc(+p[2]) + "일 <small>" + esc(D.weekday) + "요일</small>";
+  $("badge").innerHTML = D.badge ? '<span class="badge">' + esc(D.badge) + "</span>" : "";
+  $("updated").textContent = D.updated ? "정리 시각: " + D.updated : "";
+
+  var u = D.urgent || [];
+  $("urgent").innerHTML = "<h2>오늘 마감 · 급한 일</h2>" + (u.length ? u.map(function(x){
+    return '<div class="u-item"><span class="due">' + esc(x.due) + '</span><div><div class="u-title">' + esc(x.title) + '</div><div class="u-detail">' + esc(x.detail) + "</div></div></div>";
+  }).join("") : '<div class="empty">오늘 마감인 일이 없습니다.</div>');
+  if(!u.length){ $("urgent").classList.remove("urgent"); }
+
+  var byP = {}; (D.lessons || []).forEach(function(l){ byP[l.period] = l; });
+  var rows = "";
+  for(var i = 1; i <= 7; i++){
+    var l = byP[i];
+    rows += l
+      ? '<tr><td class="period">' + i + '교시</td><td class="cls"><span class="chip">' + esc(l.cls) + '</span></td><td class="ltitle">' + esc(l.title) + "</td></tr>"
+      : '<tr class="free"><td class="period">' + i + "교시</td><td></td><td>–</td></tr>";
+  }
+  $("lessons").innerHTML = rows;
+  $("lessonNote").textContent = D.lessonNote || "";
+
+  var item = function(x){
+    return '<li><span class="tag k-' + esc(x.kind) + '">' + esc(KIND[x.kind] || "") + '</span><span class="' + (x.kind === "star" ? "t-star" : "") + '">' + esc(x.text) + "</span></li>";
+  };
+  $("today").innerHTML = (D.todayEvents || []).map(item).join("") || '<li class="empty">일정이 없습니다.</li>';
+
+  $("upcoming").innerHTML = (D.upcoming || []).map(function(d){
+    var hol = d.items.some(function(x){ return x.kind === "holiday"; });
+    return '<div class="up-row wd-' + esc(d.wd) + (hol ? " hol" : "") + '"><div class="up-date">' + esc(d.date) + "<span>" + esc(d.wd) + '요일</span></div><ul class="ev">' + d.items.map(item).join("") + "</ul></div>";
+  }).join("");
+
+  var seq = D.sequence || [];
+  $("progress").innerHTML = (D.progress || []).map(function(r){
+    var bar = seq.map(function(s, i){ return '<i class="' + (i < r.done ? "on" : i === r.done ? "next" : "") + '" title="' + esc(s) + '"></i>'; }).join("");
+    var last = r.done > 0 ? seq[r.done - 1] : "시작 전";
+    var next = seq[r.done] || "완료";
+    return '<div class="prog-row"><div class="prog-cls">' + esc(r.cls) + '</div><div><div class="bar">' + bar + '</div><div class="prog-label"><b>' + esc(last) + "</b> 까지 (" + esc(r.date) + ") · 다음: " + esc(next) + (r.extra ? " · " + esc(r.extra) : "") + "</div></div></div>";
+  }).join("");
+
+  var days = ["월","화","수","목","금"], tt = D.timetable || {}, td = D.ttDay || D.weekday;
+  var h = "<tr><th></th>" + days.map(function(d){ return '<th class="' + (d === td ? "today" : "") + '">' + d + "</th>"; }).join("") + "</tr>";
+  for(var k = 0; k < 7; k++){
+    h += "<tr><th>" + (k + 1) + "</th>" + days.map(function(d){
+      var v = (tt[d] || [])[k] || "";
+      return '<td class="' + (v ? "has " : "") + (d === td ? "today" : "") + '">' + esc(v) + "</td>";
+    }).join("") + "</tr>";
+  }
+  $("tt").innerHTML = h;
+
+  $("todos").innerHTML = (D.todos || []).map(function(t){
+    return '<div class="todo ' + esc(t.state) + '"><div class="todo-due">' + esc(t.due) + "</div><div><div><b>" + esc(t.title) + '</b></div><div class="todo-detail">' + esc(t.detail) + "</div></div></div>";
+  }).join("") || '<div class="empty">남은 할 일이 없습니다.</div>';
+
+  $("notes").innerHTML = (D.notes || []).map(function(n){ return "<li>" + esc(n) + "</li>"; }).join("");
+})();
+</script>
+</body>
+</html>
